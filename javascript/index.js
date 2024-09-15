@@ -150,12 +150,10 @@ window.addEventListener('scroll', () => {
         images2_4.style.opacity = '0';
 
     } else if (scroll > 2401 && scroll < 2827) {
-        images2.style.opacity = '0';
-        images2_2.style.opacity = '0';
+        images2.style.opacity = '1';
+        images2_2.style.opacity = '1';
         images2_3.style.opacity = '1';
         images2_4.style.opacity = '1';
-        images2.style.transform = 'translateX(-1000px) rotate(-100deg)'
-        images2_2.style.transform = 'translateX(1000px) rotate(100deg)'
         images2_3.style.transform = 'translateX(0px) rotate(0deg)'
         images2_4.style.transform = 'translateX(0px)  rotate(0deg)'
         txt2.style.transition = '0.5s ease-in-out';
@@ -164,10 +162,8 @@ window.addEventListener('scroll', () => {
 
     } else if (scroll > 2828 && scroll < 3391) {
         txt2.style.transition = '0.5s ease-in-out';
-        images2_3.style.transform = 'translateX(1000px) '
-        images2_4.style.transform = 'translateX(100px) '
-        images2_3.style.opacity = '0';
-        images2_4.style.opacity = '0';
+        images2_3.style.opacity = '1';
+        images2_4.style.opacity = '1';
         txt2.style.transform = 'translateY(0px)'
         txt2.style.opacity = '1';
         txt2_2.style.transition = '0.5s ease-in-out';
@@ -223,7 +219,7 @@ window.addEventListener('scroll', () => {
         head3.style.opacity = '0';
         head3.style.transition = '0.5s ease-in-out';
         head3.style.transform = 'translateX(1000px)'
-    } else if (scroll > 4701 && scroll < 5000) {
+    } else if (scroll > 4701 && scroll < 4800) {
         head3.style.opacity = '1';
         head3.style.transition = '0.5s ease-in-out';
         head3.style.transform = 'translateX(0px)'
@@ -246,7 +242,7 @@ window.addEventListener('scroll', () => {
 
 
 
-    else if (scroll > 5001 && scroll < 5099) {
+    else if (scroll > 4801 && scroll < 5099) {
         txt2_2.style.transform = 'translateY(-100px)'
         txt2_2.style.opacity = '0';
         pt1.style.transform = 'translateX(100px)';
