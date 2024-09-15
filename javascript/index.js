@@ -318,22 +318,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
 function downloadCV() {
-    // Create a link element
-    var link = document.createElement('a');
-    link.href = '../cv/Professional Modern CV Resume (1).pdf'; // Replace with the path to your CV file
-    link.download = 'Awais.pdf'; // The name the file will be downloaded as
+    // Define the URL or path to the file
+    var fileUrl = '../cv/Professional Modern CV Resume (1).pdf'; 
 
-    // Append the link to the body (required for Firefox)
-    document.body.appendChild(link);
-
-    // Programmatically click the link to trigger the download
-    link.click();
-
-    // Remove the link from the document
-    document.body.removeChild(link);
-};
+    // Fetch the file as a Blob
+    fetch(fileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            // Create a link element
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob); // Use Blob URL
+            link.download = 'Awais.pdf'; 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href); // Clean up Blob URL
+        })
+        .catch(error => console.error('Error downloading file:', error));
+}
 
 function messageMe() {
     // Collect user input through prompts var name = prompt("What is your name?");
