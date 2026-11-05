@@ -1,229 +1,403 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Muhammad Awais Kalyar | Team Leader &amp; Mathematics Student</title>
+    <meta
+      name="description"
+      content="Portfolio of Muhammad Awais Kalyar: a driven team leader and Mathematics student at Namal University with experience in event coordination, finance support and collaborative leadership."
+    />
+    <meta name="theme-color" content="#050f1c" />
+    <meta property="og:title" content="Muhammad Awais Kalyar | Team Leader &amp; Mathematics Student" />
+    <meta property="og:description" content="Leadership, collaboration and results. Explore my journey, achievements and how I work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/portrait.jpg" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      // Theme + JS flag before first paint (avoids a flash)
+      document.documentElement.classList.replace('no-js', 'js')
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home </title>
-  <link rel="stylesheet" href="./css/index.css">
-  <script src="./javascript/index.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <link rel="icon" href="../images/logo.jpeg" type="image/png">
-  <script src="https://kit.fontawesome.com/1528b5b76b.js" crossorigin="anonymous"></script>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-</head>
+    <header class="site-header" id="top">
+      <div class="container bar">
+        <a class="logo" href="#home" aria-label="Muhammad Awais Kalyar, home">Awais<span>.</span></a>
 
-<body>
-  <nav id="navbar">
-    <ul>
-      <li><a href="#section0">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#section5">Achievments</a></li>
-      <li><a href="#section2">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="btn_nav" id="btn_nav" onclick="btn_nav()">
-   
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <section class="section0" id="section0">
-    <div class="heading_1"><h1 id="heading1">
-        My <br> <span style="color: red;">Management <br>
+        <nav class="nav" id="nav" aria-label="Main">
+          <ul>
+            <li><a href="#home" data-spy>Home</a></li>
+            <li><a href="#about" data-spy>About</a></li>
+            <li><a href="#journey" data-spy>Journey</a></li>
+            <li><a href="#approach" data-spy>Approach</a></li>
+            <li><a href="#awards" data-spy>Awards</a></li>
+            <li><a href="#contact" data-spy>Contact</a></li>
+          </ul>
+        </nav>
 
-        </span> Approach
-    </h1>
-</div>
-   <div class="img0_1" >
-    <img src="./images/my_pic.png" alt="" id="img0_1">
-    <div class="line1">
-      <span></span>
-    </div>
-    <div class="txt0_1">
-      <h1>Muhammad Awais </h1>
-    </div>
-   </div>
-  </section>
-
-  <section class="section1">
-    <div class="text" id="text">
-<p>Driven team leader with a talent for <span class="highlight-red">fostering collaboration</span> and enhancing <span class="highlight-red">team morale</span>. Combining <span class="highlight-red">effective communication</span> with a <span class="highlight-red">proactive approach</span> to <span class="highlight-red">align goals</span> and achieve <span class="highlight-red">outstanding results</span>.</p>
-    </div>
-    <div class="images">
-      <div class="img1" id="img1"><img src="./images/440940358_961884029279483_4042068207844888839_n.jpg" alt=""></div>
-      <div class="img2" id="img2"><img src="./images/441063670_961884299279456_1994770715572485774_n.jpg" alt=""></div>
-      <div class="img3" id="img3"><img src="./images/441155081_963608342440385_3701187062808479048_n.jpg" alt=""></div>
-
-    </div>
-  </section>
-  <section class="section2" id="section2" >
-    <div class="heading2">
-      <h1 id="heading2">About</h1>
-    </div>
-    <div class="images2">
-      <div class="img2_1" id="images2_1">
-        <div class="btns2"><p>I completed my Matriculation with a focus on Biology, followed by my Higher Secondary School Certificate (HSSC) with a specialization in Pre-Engineering. Currently, I am pursuing a Bachelor's degree in Mathematics.</p>
-    
+        <div class="bar-actions">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+            <i class="fa-solid fa-sun i-sun" aria-hidden="true"></i>
+            <i class="fa-solid fa-moon i-moon" aria-hidden="true"></i>
+          </button>
+          <a class="btn btn-cv" href="cv/Muhammad-Awais-CV.pdf" download="Muhammad-Awais-CV.pdf">
+            <span>Download CV</span> <i class="fa-solid fa-download" aria-hidden="true"></i>
+          </a>
+          <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-      
-      <div class="img2_1" id="images2_2">
-        <img src="./images/bg_pic.jpg" alt="">
-        <div class="btns2"><i class="fa-regular fa-arrow-up-right"></i></button>
+    </header>
+
+    <main id="main">
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="home" aria-labelledby="hero-name">
+        <div class="container">
+          <div class="frame">
+            <div class="hero-grid">
+              <div class="hero-photo reveal">
+                <div class="blob">
+                  <img src="assets/hero.webp" alt="Portrait of Muhammad Awais Kalyar" width="421" height="568" fetchpriority="high" />
+                </div>
+              </div>
+
+              <div class="hero-text">
+                <p class="hello reveal">Hello, I'm</p>
+                <h1 id="hero-name" class="reveal">Muhammad Awais Kalyar</h1>
+                <p class="role reveal">
+                  And I'm a <span class="typed" id="typed" aria-live="off">Team Leader</span><span class="caret" aria-hidden="true"></span>
+                </p>
+                <p class="lead reveal">
+                  Driven team leader with a talent for fostering collaboration and lifting team morale. I combine clear
+                  communication with a proactive approach to align goals and deliver outstanding results.
+                </p>
+                <ul class="socials reveal" aria-label="Social profiles">
+                  <li><a href="https://www.linkedin.com/in/muhammad-awais-kalyar-1744072b8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=61556622592885" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.instagram.com/awaiskalyar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="https://www.tiktok.com/@awaiskalyar" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+                <div class="hero-cta reveal">
+                  <a class="btn btn-primary" href="#contact">Hire Me</a>
+                  <a class="btn btn-outline" href="mailto:awaiskalyar098@gmail.com">Contact Me</a>
+                </div>
+              </div>
+            </div>
+
+            <ul class="stats" aria-label="At a glance">
+              <li><strong data-count="4">4</strong><span>Awards &amp;<br />Certificates</span></li>
+              <li><strong data-count="3">3</strong><span>Leadership<br />Roles</span></li>
+              <li><strong data-count="6">6</strong><span>Core<br />Skills</span></li>
+              <li><strong data-count="3">3</strong><span>Languages<br />Spoken</span></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="img2_1" id="images2_3">
-        <img src="./images/441063670_961884299279456_1994770715572485774_n.jpg" alt="">
-        <div class="btns2">
-          
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <figure class="about-photo reveal">
+            <img src="assets/portrait.jpg" alt="Muhammad Awais Kalyar standing outdoors in a grey blazer" loading="lazy" width="900" height="1265" />
+          </figure>
+
+          <div class="about-text">
+            <p class="eyebrow reveal">About me</p>
+            <h2 id="about-title" class="reveal">Leading with <span class="accent">clarity</span> and collaboration</h2>
+            <p class="reveal">
+              I excel at managing projects through a blend of <strong>strategic thinking</strong> and <strong>effective leadership</strong>.
+              By understanding the needs of each setting, I streamline processes, coordinate teams and drive success with tailored solutions.
+            </p>
+            <p class="reveal">
+              I put <strong>collaboration</strong> and <strong>team morale</strong> first. Setting clear goals, giving constructive feedback and
+              encouraging growth keep everyone aligned with the project's objectives, and my proactive mindset and commitment to
+              <strong>continuous improvement</strong> help me lead teams to strong results.
+            </p>
+
+            <div class="info-grid reveal">
+              <div><span>Studying</span><strong>BS Mathematics, Namal University</strong></div>
+              <div><span>Based in</span><strong>Mianwali, Pakistan</strong></div>
+              <div><span>Languages</span><strong>Urdu · Saraiki · English (basic)</strong></div>
+              <div><span>Email</span><strong><a href="mailto:awaiskalyar098@gmail.com">awaiskalyar098@gmail.com</a></strong></div>
+            </div>
+
+            <h3 class="skills-title reveal">Core skills</h3>
+            <ul class="chips reveal">
+              <li><i class="fa-solid fa-diagram-project"></i> Management</li>
+              <li><i class="fa-solid fa-flag"></i> Leadership</li>
+              <li><i class="fa-solid fa-handshake"></i> Negotiation</li>
+              <li><i class="fa-solid fa-brain"></i> Critical Thinking</li>
+              <li><i class="fa-solid fa-lightbulb"></i> Creativity</li>
+              <li><i class="fa-solid fa-bullhorn"></i> Digital Marketing</li>
+            </ul>
+
+            <a class="btn btn-primary reveal" href="cv/Muhammad-Awais-CV.pdf" download="Muhammad-Awais-CV.pdf">
+              Download Resume <i class="fa-solid fa-download" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="img2_1" id="images2_4">
-        <img src="./images/440936238_961885672612652_2937538217541024313_n.jpg" alt="">
-        <div class="btns2">
-          
+      </section>
+
+      <!-- ================= JOURNEY ================= -->
+      <section class="section alt" id="journey" aria-labelledby="journey-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow reveal">Experience &amp; education</p>
+            <h2 id="journey-title" class="reveal">My <span class="accent">journey</span> so far</h2>
+          </header>
+
+          <div class="journey-grid">
+            <div>
+              <h3 class="col-title reveal"><i class="fa-solid fa-briefcase"></i> Experience &amp; leadership</h3>
+              <ol class="timeline">
+                <li class="reveal">
+                  <span class="when">2023 – 2024</span>
+                  <h4>Assistant Finance</h4>
+                  <p class="where">Namal Skills Development Society</p>
+                  <p>Completed a one-year role contributing to financial management and administrative support, improving organizational efficiency.</p>
+                </li>
+                <li class="reveal">
+                  <span class="when">2022 – 2023</span>
+                  <h4>Culture Ambassador</h4>
+                  <p class="where">Culture Fest 2023 · Namal Society for Social Impact</p>
+                  <p>Promoted cultural exchange and engagement: coordinated with participants, facilitated event activities and enhanced the overall festival experience.</p>
+                </li>
+                <li class="reveal">
+                  <span class="when">Namal University</span>
+                  <h4>Organizing Committee Member</h4>
+                  <p class="where">Maths Carnival · STEAM Pakistan</p>
+                  <p>Served on the organizing committee and was recognized with a Certificate of Appreciation by the Head of Mathematics.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div>
+              <h3 class="col-title reveal"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+              <ol class="timeline">
+                <li class="reveal">
+                  <span class="when">2022 – 2026</span>
+                  <h4>BS Mathematics</h4>
+                  <p class="where">Namal University, Mianwali</p>
+                  <p>Currently pursuing a Bachelor's degree in Mathematics.</p>
+                </li>
+                <li class="reveal">
+                  <span class="when">2020 – 2022</span>
+                  <h4>HSSC, Pre-Engineering</h4>
+                  <p class="where">Punjab Group of Colleges, Mianwali</p>
+                  <p>Graduated with 74.9% (824 / 1100).</p>
+                </li>
+                <li class="reveal">
+                  <span class="when">2018 – 2020</span>
+                  <h4>Matriculation, Biology</h4>
+                  <p class="where">Hudaibia Model High School</p>
+                  <p>Scored 82.5% (903 / 1100).</p>
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="text2">
-      <div class="text2_1" id="text2_1">
+      </section>
+
+      <!-- ================= APPROACH ================= -->
+      <section class="section" id="approach" aria-labelledby="approach-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow reveal">How I work</p>
+            <h2 id="approach-title" class="reveal">My <span class="accent">management</span> approach</h2>
+          </header>
+
+          <ul class="cards five">
+            <li class="card reveal">
+              <span class="card-icon"><i class="fa-solid fa-chess-knight"></i></span>
+              <h3>Strategic Management</h3>
+              <p>Use strategic thinking and leadership to guide projects from plan to delivery.</p>
+            </li>
+            <li class="card reveal">
+              <span class="card-icon"><i class="fa-solid fa-sliders"></i></span>
+              <h3>Tailored Solutions</h3>
+              <p>Adapt solutions to meet the needs of each setting and boost productivity.</p>
+            </li>
+            <li class="card reveal">
+              <span class="card-icon"><i class="fa-solid fa-people-group"></i></span>
+              <h3>Team Coordination</h3>
+              <p>Set clear goals, share responsibilities and keep everyone moving in the same direction.</p>
+            </li>
+            <li class="card reveal">
+              <span class="card-icon"><i class="fa-solid fa-arrows-rotate"></i></span>
+              <h3>Continuous Improvement</h3>
+              <p>Promote collaboration and growth for high morale and project success.</p>
+            </li>
+            <li class="card reveal">
+              <span class="card-icon"><i class="fa-solid fa-bolt"></i></span>
+              <h3>Proactive Approach</h3>
+              <p>Address challenges early with well-planned strategies.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= AWARDS ================= -->
+      <section class="section alt" id="awards" aria-labelledby="awards-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow reveal">Recognition</p>
+            <h2 id="awards-title" class="reveal">Awards &amp; <span class="accent">certifications</span></h2>
+            <p class="sub reveal">Select a certificate to view it larger.</p>
+          </header>
+
+          <ul class="cert-grid">
+            <li class="reveal">
+              <button class="cert" type="button" data-lightbox="assets/cert-steam.jpg" data-caption="Certificate of Appreciation: Maths Carnival organizing committee (STEAM Pakistan)">
+                <img src="assets/cert-steam.jpg" alt="Certificate of Appreciation from STEAM Pakistan for the Maths Carnival organizing committee" loading="lazy" width="577" height="433" />
+                <span class="cert-meta"><strong>Certificate of Appreciation</strong><em>Maths Carnival · STEAM Pakistan</em></span>
+              </button>
+            </li>
+            <li class="reveal">
+              <button class="cert" type="button" data-lightbox="assets/cert-nsds.jpg" data-caption="Certificate of Achievement: Assistant Finance, Namal Skills Development Society">
+                <img src="assets/cert-nsds.jpg" alt="Certificate of Achievement from Namal Skills Development Society for one year as Assistant Finance" loading="lazy" width="577" height="433" />
+                <span class="cert-meta"><strong>Certificate of Achievement</strong><em>Assistant Finance · Namal Skills Development Society</em></span>
+              </button>
+            </li>
+            <li class="reveal">
+              <button class="cert" type="button" data-lightbox="assets/cert-peef.jpg" data-caption="Soft Skills Development Program: Certificate of Completion (PEEF)">
+                <img src="assets/cert-peef.jpg" alt="Soft Skills Development Program certificate of completion from the Punjab Educational Endowment Fund" loading="lazy" width="577" height="433" />
+                <span class="cert-meta"><strong>Soft Skills Development Program</strong><em>Certificate of Completion · PEEF</em></span>
+              </button>
+            </li>
+            <li class="reveal">
+              <button class="cert" type="button" data-lightbox="assets/cert-culturalfest.jpg" data-caption="Cultural Ambassador, Cultural Fest 23 (Namal Society for Social Impact)">
+                <img src="assets/cert-culturalfest.jpg" alt="Cultural Ambassador certificate from Cultural Fest 23" loading="lazy" width="610" height="409" />
+                <span class="cert-meta"><strong>Cultural Ambassador</strong><em>Cultural Fest 23 · Namal Society for Social Impact</em></span>
+              </button>
+            </li>
+          </ul>
+
+          <h3 class="col-title moments-title reveal"><i class="fa-solid fa-camera"></i> Moments</h3>
+          <ul class="gallery">
+            <li class="reveal wide">
+              <button type="button" class="shot" data-lightbox="assets/culture-fest-stage.jpg" data-caption="Culture Fest 2024 at Namal University">
+                <img src="assets/culture-fest-stage.jpg" alt="Crowd gathered around the stage at Culture Fest 2024 in the Namal University courtyard" loading="lazy" width="1400" height="788" />
+                <span>Culture Fest 2024</span>
+              </button>
+            </li>
+            <li class="reveal">
+              <button type="button" class="shot" data-lightbox="assets/team-shield.jpg" data-caption="Culture Fest 2024 team with the Best Department of the Year shield">
+                <img src="assets/team-shield.jpg" alt="Group of students holding a shield on stage at Culture Fest 2024" loading="lazy" width="1400" height="933" />
+                <span>Culture Fest 2024 · Team</span>
+              </button>
+            </li>
+            <li class="reveal">
+              <button type="button" class="shot" data-lightbox="assets/namaltech-expo.jpg" data-caption="NamalTech Expo 2024 group photo">
+                <img src="assets/namaltech-expo.jpg" alt="Group photo at NamalTech Expo 2024" loading="lazy" width="600" height="338" />
+                <span>NamalTech Expo 2024</span>
+              </button>
+            </li>
+            <li class="reveal wide">
+              <button type="button" class="shot" data-lightbox="assets/culture-stall.jpg" data-caption="Traditional culture stall at Culture Fest">
+                <img src="assets/culture-stall.jpg" alt="Two girls in traditional dress at a handicraft stall at Culture Fest" loading="lazy" width="1400" height="933" />
+                <span>Culture stall</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <p class="eyebrow reveal">Need a manager?</p>
+            <h2 id="contact-title" class="reveal">Let's work <span class="accent">together</span></h2>
+            <p class="reveal">Have a project, event or team that needs organized, reliable leadership? Send me a message and I'll get back to you.</p>
+
+            <ul class="contact-list reveal">
+              <li>
+                <span class="ci"><i class="fa-solid fa-envelope"></i></span>
+                <div><small>Email</small><a href="mailto:awaiskalyar098@gmail.com">awaiskalyar098@gmail.com</a></div>
+              </li>
+              <li>
+                <span class="ci"><i class="fa-solid fa-phone"></i></span>
+                <div><small>Phone</small><a href="tel:+923170779987">+92 317 0779987</a></div>
+              </li>
+              <li>
+                <span class="ci"><i class="fa-solid fa-location-dot"></i></span>
+                <div><small>Location</small><span>Mianwali, Pakistan</span></div>
+              </li>
+            </ul>
+
+            <ul class="socials reveal" aria-label="Social profiles">
+              <li><a href="https://www.linkedin.com/in/muhammad-awais-kalyar-1744072b8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61556622592885" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/awaiskalyar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.tiktok.com/@awaiskalyar" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="contact-form" novalidate>
+            <h3>Send a message</h3>
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="row">
+              <label class="field">
+                <span>Your name</span>
+                <input type="text" name="name" autocomplete="name" required maxlength="100" placeholder="Full name" />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Phone <em>(optional)</em></span>
+              <input type="tel" name="phone" autocomplete="tel" maxlength="30" placeholder="+92 ..." />
+            </label>
+            <label class="field">
+              <span>How can I help?</span>
+              <textarea name="message" rows="5" required minlength="10" maxlength="3000" placeholder="Tell me about your project or team"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit" id="form-submit">Send message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container foot">
+        <p>© <span id="year">2025</span> Muhammad Awais Kalyar. All rights reserved.</p>
         <p>
-            I excel in managing diverse projects through a blend of <span class="highlight-red">strategic thinking</span> and <span class="highlight-red">effective leadership</span>. By understanding the unique needs of each industry, I streamline processes, coordinate teams, and drive success with tailored solutions. My approach ensures enhanced <span class="highlight-red">efficiency</span> and <span class="highlight-red">productivity</span> across various fields.
-            In addition, I focus on <span class="highlight-red">fostering collaboration</span> and maintaining high <span class="highlight-red">team morale</span>. Setting clear goals, providing constructive feedback, and encouraging growth are key to aligning team efforts with project objectives. My proactive mindset and commitment to <span class="highlight-red">continuous improvement</span> enable me to lead teams effectively and achieve exceptional results.
-        </p>
-            <div class="down-arrow-img">
-          <img src="./images/thin-line-arrow-icon-vector-260nw-686107600-removebg-preview (1).png" alt="">
-        </div>
-      </div>
-      <div class="text2_2" id="text2_2">
-        <div class="btn2">
-          <button id="downloadCV" onclick="downloadCV()">Download Resume</button>
-        </div>
-       <p> I am skilled in <span class="highlight-red">fostering collaboration</span> and maintaining high <span class="highlight-red">team morale</span>. By setting <span class="highlight-red">clear goals</span>, providing <span class="highlight-red">feedback</span>, and <span class="highlight-red">encouraging growth</span>, I align team efforts with project objectives. My <span class="highlight-red">proactive approach</span> and commitment to <span class="highlight-red">continuous improvement</span> ensure that I lead teams effectively and achieve outstanding results in every management role.</p>
-    </div>
-    </div>
-  </section>
-  <section class="section5" id="section5">
-    <div class="heading5" id="heading5"><h1>Awards & Certifications</h1></div>
-    <div class="images5" id="images5">
-      <div class="img5_1 img5" id="img5_1"><img src="./images/1-removebg-preview.png" alt=""></div>
-      <div class="img5_2 img5" id="img5_2"><img src="./images/2-removebg-preview.png" alt=""></div>
-      <div class="img5_3 img5" id="img5_3"><img src="./images/3-removebg-preview.png" alt=""></div>
-      <div class="img5_4 img5" id="img5_4"><img src="./images/4-removebg-preview.png" alt=""></div>
-    </div>
-  </section>
-  <section class="section3"   id="services">
-    <div class="heading3" id="heading3">
-      <h1 id="heading3">My Process</h1>
-    </div>
-    <div class="points">
-      <div class="point_1" id="point_1">
-        <img src="./images/png-transparent-strategic-partnership-mit-school-of-telecom-management-pune-publishing-computer-icons-partnership-miscellaneous-company-hand-thumbnail.png" alt="">
-        <h1>Strategic Management</h1>
-        <p> Use strategic thinking and leadership <br> to guide projects</p>
-      </div>
-      <div class="point_1" id="point_2">
-        <img src="./images/b288cc7-6d7d-50ef-54a1-c37cc3af0f5_Add_a_subheading-28.webp" alt="">
-        <h1>Tailored Solutions</h1>
-        <p> Adapt solutions to meet industry-specific <br>needs and boost productivity.</p>
-      </div>
-      <div class="point_1" id="point_3">
-        <img src="./images/png-transparent-computer-icons-team-work-miscellaneous-hand-orange.png" alt="">
-        <h1>Team Coordination</h1>
-        <p> Use strategic thinking and leadership <br> to guide projects</p>
-      </div>
-      <div class="point_1" id="point_4">
-        <img src="./images/9849589.png" alt="">
-        <h1>Continuous Improvement</h1>
-        <p>Promote collaboration and growth for high <br> morale and project success.</p>
-      </div>
-      <div class="point_1" id="point_5">
-        <img src="./images/proactive-sign-icon-logo-white-background-proactive-sign-icon-logo-139825934.webp" alt="">
-        <h1>Proactive Approach</h1>
-        <p>Address challenges early with well-planned strategies.
+          <a href="https://www.linkedin.com/in/muhammad-awais-kalyar-1744072b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="mailto:awaiskalyar098@gmail.com">Email</a>
+          <span aria-hidden="true">·</span>
+          <a href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
         </p>
       </div>
-    </div>
-  </section>
-  <section class="section4" id="contact">
-    <div class="txt4" id="txt4">
-      <h4>NEED A MANAGER?</h4>
-    </div>
-    <div class="heading4" id="heading4">
-      <h1>Let's Work Together</h1>
-    </div>
-    <div class="btns" id="btns">
-      <button id="messageMe" onclick="messageMe()" >Massage</button>
-      <button onclick="disproj()">Discuss Project</button>
-    </div>
-    <div class="icons4">
-      <a href="#"><i class="fa-solid fa-envelope"></i> Awaiskalyar@gmail.com</a>
-      <span><i class="fa-solid fa-phone"></i>+9230-0000-0000</span>
-    </div>
-    <div class="socials">
-      <div class="socials_">
-        <hr>
-        <div class="socal_app">
-          <div class="txt4_social">
+    </footer>
 
-            <h1>Instagram</h1>
-            <p>@awaiskalyar</p>
-        </div>
-        <div class="font_asome">
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-        </div>
-      </div>
-      <div class="socials_">
-        <hr>
-        <div class="socal_app">
-          <div class="txt4_social">
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <button class="lb-close" type="button" id="lb-close" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lb-img" alt="" />
+      <p id="lb-caption"></p>
+    </dialog>
 
-            <h1>Linkedin</h1>
-            <p><a style="text-decoration: none;color: aliceblue;" href="https://www.linkedin.com/in/muhammad-awais-kalyar-1744072b8/">@awaiskalyar</a></p>
-        </div>
-        <div class="font_asome">
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
-        </div>
-      </div>
-      <div class="socials_">
-        <hr>
-        <div class="socal_app">
-          <div class="txt4_social">
-
-            <h1>Facebook</h1>
-            <p> <a href="https://www.facebook.com/profile.php?id=61556622592885" style="text-decoration: none; color: aliceblue;">@awaiskalyar</a></p>
-        </div>
-        <div class="font_asome">
-            <i class="fa-brands fa-square-facebook"></i>
-        </div>
-        </div>
-      </div>
-      <div class="socials_">
-        <hr>
-        <div class="socal_app">
-          <div class="txt4_social">
-
-            <h1>Tiktok</h1>
-            <p>@awaiskalyar</p>
-        </div>
-        <div class="font_asome">
-            <i class="fa-brands fa-tiktok"></i>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="f_txt1">© 2024 Awais Kalyar.Empowering web experiences. All rights reserved. </div>
-    <div class="f_txt2" >Connect with me: <a href="https://www.linkedin.com/in/muhammad-awais-kalyar-1744072b8/">LinkedIn</a> | <a href="">GitHub</a> |<a href=""> Email</a></div>
-
-  </footer>
-</body>
-
+    <script src="javascript/main.js" defer></script>
+  </body>
 </html>
