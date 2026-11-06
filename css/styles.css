@@ -1112,3 +1112,101 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- 3D hero portrait ---- */
+.tilt {
+  perspective: 1100px;
+  width: min(420px, 82vw);
+}
+.tilt .blob {
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+}
+.tilt .blob::before {
+  transform: translateZ(-30px);
+}
+.tilt .blob::after {
+  display: none;
+}
+.tilt .blob img {
+  height: auto;
+  width: 108%;
+  max-width: none;
+  transform: translateX(-50%) translateZ(70px);
+  filter: drop-shadow(0 26px 22px rgba(0, 10, 30, 0.55)) drop-shadow(0 0 1px rgba(255, 255, 255, 0.35));
+}
+.ring {
+  position: absolute;
+  inset: -3% -6% 8% -6%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transform: translateZ(20px) rotate(-12deg);
+  pointer-events: none;
+  box-shadow: 0 0 24px -4px var(--glow);
+}
+.floor-shadow {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -4%;
+  height: 9%;
+  background: radial-gradient(ellipse at center, rgba(0, 8, 30, 0.55), transparent 70%);
+  transform: translateZ(-40px);
+  filter: blur(6px);
+}
+.chip {
+  position: absolute;
+  z-index: 3;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(10, 30, 70, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.6);
+  transform: translateZ(110px);
+  animation: bob 5s ease-in-out infinite;
+  white-space: nowrap;
+}
+.chip-a {
+  top: 14%;
+  left: -4%;
+}
+.chip-b {
+  bottom: 18%;
+  right: -4%;
+  animation-delay: -2.4s;
+}
+@keyframes bob {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -8px;
+  }
+}
+@media (max-width: 520px) {
+  .chip {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.7rem;
+  }
+  .chip-a {
+    left: 0;
+  }
+  .chip-b {
+    right: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chip {
+    animation: none;
+  }
+  .tilt .blob {
+    transition: none;
+  }
+}
