@@ -220,23 +220,3 @@ form.addEventListener('submit', async (e) => {
     submit.disabled = false
   }
 })
-
-// 3D tilt on the hero portrait (pointer devices only, skipped for reduced motion)
-;(() => {
-  const el = document.querySelector('[data-tilt]')
-  if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-  if (!window.matchMedia('(hover: hover)').matches) return
-  const blob = el.querySelector('.blob')
-  const reset = () => {
-    blob.style.setProperty('--rx', '0deg')
-    blob.style.setProperty('--ry', '0deg')
-  }
-  el.addEventListener('pointermove', (e) => {
-    const r = el.getBoundingClientRect()
-    const x = (e.clientX - r.left) / r.width - 0.5
-    const y = (e.clientY - r.top) / r.height - 0.5
-    blob.style.setProperty('--ry', `${(x * 16).toFixed(2)}deg`)
-    blob.style.setProperty('--rx', `${(-y * 12).toFixed(2)}deg`)
-  })
-  el.addEventListener('pointerleave', reset)
-})()
